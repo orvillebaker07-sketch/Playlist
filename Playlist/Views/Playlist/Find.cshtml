@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Search";
+}
+
+@if (ViewBag.Song != null)
+{
+    <h1>@ViewBag.Song</h1>
+    <a asp-action="Track" asp-route-number="@ViewBag.Number">Play it</a>
+}
+else
+{
+    <h1>No track matches @ViewBag.Word</h1>
+}

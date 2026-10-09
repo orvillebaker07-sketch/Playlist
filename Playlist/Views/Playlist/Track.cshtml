@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Track " + ViewBag.Number;
+}
+
+<h1>Track @ViewBag.Number: @ViewBag.Song</h1>
+
+<p>
+    @if (ViewBag.Number > 1)
+    {
+        <a asp-action="Track" asp-route-number="@(ViewBag.Number - 1)">Prev</a>
+    }
+    @if (ViewBag.Number < ViewBag.Count)
+    {
+        <a asp-action="Track" asp-route-number="@(ViewBag.Number + 1)">Next</a>
+    }
+</p>

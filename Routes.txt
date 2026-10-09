@@ -1,0 +1,9 @@
+URL                       GUESS  ACTUAL  WHY
+/Playlist                 200     200     conventional route for Index (no attribute)
+/liner-notes              200     200       attribute route
+/track/6                  200     200       in range 1-6
+/find/two/words           200     200       alpha fails, catch-all takes it
+/track/-1                 404     404       range(1,6) fails
+/track/2.5                404     404       int fails
+/Playlist/Find/koffee     404     404       attribute route shuts off the conventional route
+/track/3/extra            404     404       extra segment, no route matches

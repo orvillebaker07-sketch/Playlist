@@ -1,0 +1,12 @@
+﻿@model string[]
+@{
+    ViewData["Title"] = "Playlist";
+}
+
+<h1>My playlist</h1>
+<ol>
+    @foreach (var song in Model)
+    {
+        <li>@song</li>
+    }
+</ol>
